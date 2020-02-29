@@ -1,9 +1,13 @@
 // Define a constructor function template for hotels
-function Hotel(name, rooms, booked) {
+function Hotel(name, rooms, booked, gym, breakfest, pool, carPark) {
     // Object properties
     this.name = name;
     this.rooms = rooms;
     this.booked = booked;
+    this.gym = gym;
+    this.breakfest = breakfest;
+    this.pool = pool;
+    this.carPark = carPark;
     this.checkAvailablity = function() {
         return this.rooms - this.booked;
     };
@@ -13,7 +17,7 @@ function Hotel(name, rooms, booked) {
 var clayHotel = new Hotel('Clayton', 68, 3);
 var lemonHotel = new Hotel('Lemon', 56, 15);
 
-// Declare a variable to hold the name of the hotel and room availability 
+// Declare a variable to hold the name of the hotel and room, gym, breakfest and pool availability 
 var details1 = clayHotel.name + ' rooms: ';
     // add content to an existing variable----
     details1 += clayHotel.checkAvailablity();
@@ -27,3 +31,6 @@ var details2 = lemonHotel.name + ' rooms: ';
 var elHotel2 = document.getElementById('hotel2');
 elHotel2.textContent = details2;
 
+var foodDetails1 = clayHotel.breakfest;
+    foodDetails1 = document.getElementById('breakfest');
+breakfest.textContent = foodDetails1;
